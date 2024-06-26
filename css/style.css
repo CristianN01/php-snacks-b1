@@ -1,0 +1,12 @@
+.grey-square {
+    background-color: grey;
+    padding: 1rem 1.5rem;
+    border: 1px solid black;
+}
+
+.green-square {
+    background-color: green;
+    padding: 1rem 1.5rem;
+    border: 1px solid black;
+}
+
