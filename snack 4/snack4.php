@@ -1,3 +1,4 @@
+
 <?php
 
 $randomArray = [];
@@ -8,7 +9,6 @@ while (count($randomArray) < 15 ) {
     if (!in_array($number, $randomArray)) {
         $randomArray[] = $number;
     }
-    return $randomArray;
 };
 ?>
 
