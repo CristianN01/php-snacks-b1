@@ -2,8 +2,7 @@
 require_once __DIR__ . '/array.php'
 ?>
  <?php foreach ($classe as $alunno) { ?>
-   <?php echo $alunno['Nome']; echo $alunno['Cognome']; ?>
-    <?php foreach ($alunno as $key => $value) {
-        # code...
-    }
+   <li>
+        <?php echo $alunno['Nome'] . ' ' . $alunno['Cognome']; ?> - <?php echo count($alunno['Voti']) ?>
+   </li>
 <?php } ?>

@@ -7,7 +7,23 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="./index.php" method="get">
+
+<?php
+
+    if (empty($_GET['name']) || empty($_GET['email']) || empty($_GET['age'])) {
+        echo 'Errore';
+    } else if (strlen($_GET['name']) <= 3) {
+        echo 'Accesso negato';
+    } else if (!str_contains($_GET['email'], '@') || !str_contains($_GET['email'], '.')) {   
+        echo 'Accesso negato';
+    } else if (!is_numeric($_GET['age'])) {
+        echo 'Accesso negato';
+    } else {
+        echo 'Accesso consentito';
+    }
+
+?>
+    <form action="./access.php" method="GET">
         <div>
             <label for="">Name</label>
             <input type="text" name='name' id='name'> 
@@ -26,15 +42,3 @@
 </body>
 </html>
 
-<?php
-$name = $_GET['name'];
-
-
-
-if (str_contains($name,'@','.')) {
-    echo "Accesso riuscito";
-} else 
-    "Accesso negato"
-
-
-?>

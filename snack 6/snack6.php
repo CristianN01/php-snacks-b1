@@ -40,15 +40,15 @@ $green = 'green-square';
 <body>
 
     <p class=" <?php echo $grey ?> " >
-        <?php foreach ($db['teachers'] as $key => $value) {
-            var_dump($key, $value);
-        } ?>
+        <?php foreach ($db['teachers'] as $teacher) { ?>
+            <?php echo $teacher['name'] . ' ' . $teacher['lastname'].','; ?>
+         <?php } ?>
     </p>
 
     <p class=" <?php echo $green ?> " >
-        <?php foreach ($db['pm'] as $key => $value) {
-            var_dump($key, $value);
-        } ?>
+        <?php foreach ($db['pm'] as $pm) { ?>
+            <?php echo $pm['name'] . ' ' . $pm['lastname'].','; ?>
+        <?php } ?>
     </p>
     
 </body>

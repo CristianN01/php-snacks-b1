@@ -12,4 +12,10 @@ while (count($randomArray) < 15 ) {
 };
 ?>
 
-<?php var_dump($randomArray); ?>
+<ul>
+    <?php foreach ($randomArray as $number) { ?>
+        <li>
+            <?php echo $number ?>
+        </li>
+    <?php } ?>
+</ul>

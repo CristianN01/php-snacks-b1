@@ -41,11 +41,36 @@ $posts = [
 ];
 ?>
 
-<ul>
-    <?php foreach ($posts as $post) { ?>
-        <li>
-        <?php var_dump($post) ?>
-        </li>
-    <?php } ?>
-</ul>
-?>
+<h1>
+    I NOSTRI POST
+</h1>
+
+
+
+    <?php foreach ($posts as $date => $postPerDate) { ?>
+    
+        <h2>
+            Lista dei post pubblicati: <?php echo $date; ?>
+        </h2>
+
+        <ul>
+            <?php foreach ($postPerDate as $post) { ?>
+                <li>
+                    <h3>
+                        <?php echo $post['title']; ?>
+                    </h3>
+
+                    <p>
+                        <?php echo $post['author']; ?>
+                    </p>
+
+                    <p>
+                        <?php echo $post['text']; ?>
+                    </p>
+                </li>
+        <?php } ?>
+        
+        </ul>
+
+<?php } ?>
+
